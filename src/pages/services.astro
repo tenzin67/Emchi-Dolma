@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import services from '../content/services.json';
+---
+
+<BaseLayout 
+  title="Our Treatments"
+  description="Comprehensive Tibetan Medicine treatments by Emchi Tsundu Dolma. Pulse reading, Kanye oil therapy, cupping, acupuncture, moxibustion, Shirodhara, Kati Basti, and more."
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="page-hero-tibetan tibetan-script">སྨན་གྱི་གཞུང་འཇལ།</p>
+      <h1 class="page-hero-title">Our Treatments</h1>
+      <p class="page-hero-subtitle">
+        Individualised Tibetan Medicine & Ayurvedic therapies — each uniquely tailored to your constitution and health goals.
+      </p>
+    </div>
+    <div class="page-hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#F5F1E8"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section" style="background: #F5F1E8;" aria-labelledby="services-list-heading">
+    <div class="container">
+      <h2 id="services-list-heading" class="visually-hidden">All Treatments</h2>
+      <div class="grid-3">
+        {services.map((service, i) => (
+          <ServiceCard
+            tibetanName={service.tibetanName}
+            englishName={service.englishName}
+            subtitle={service.subtitle}
+            description={service.description}
+            icon={service.icon}
+            benefits={service.benefits}
+            href="/contact"
+            delay={i * 75}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional treatment info -->
+  <section class="section" style="background: white;">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <div class="info-icon" aria-hidden="true">⏱️</div>
+          <h3>Session Duration</h3>
+          <p>Initial consultations are typically 60–90 minutes, allowing Emchi to conduct a thorough pulse assessment and establish your personalized treatment plan. Follow-up sessions are 30–60 minutes.</p>
+        </div>
+        <div class="info-card reveal delay-2">
+          <div class="info-icon" aria-hidden="true">🏥</div>
+          <h3>What to Expect</h3>
+          <p>You'll be warmly welcomed and asked about your health history, diet, lifestyle, and concerns. Emchi will then perform a traditional pulse reading before recommending the most appropriate treatment.</p>
+        </div>
+        <div class="info-card reveal delay-3">
+          <div class="info-icon" aria-hidden="true">📅</div>
+          <h3>Booking & Location</h3>
+          <p>Consultations are available in Werribee, VIC, and monthly at Tara Institute (1st Saturday). All treatments are by appointment. Call <a href="tel:+61458494785">0458 494 785</a> or use our contact form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: linear-gradient(135deg, #1B5E7F, #0F3D52); text-align: center;">
+    <div class="container">
+      <h2 class="reveal" style="color: white; font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">
+        Ready to Begin?
+      </h2>
+      <p class="reveal delay-1" style="color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto 2rem;">
+        Contact Emchi Tsundu Dolma to discuss which treatment is right for you.
+      </p>
+      <div class="reveal delay-2" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn-secondary" id="services-book-btn">Book a Consultation</a>
+        <a href="tel:+61458494785" class="btn btn-outline" id="services-call-btn">Call Now</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1B5E7F, #0F3D52);
+    padding: 5rem 0 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero-inner { position: relative; z-index: 1; }
+  .page-hero-tibetan { font-size: 1.25rem; color: rgba(255,255,255,0.55); display: block; margin-bottom: 0.75rem; }
+  .page-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    margin-bottom: 1rem;
+  }
+  .page-hero-subtitle { color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto; font-size: 1.0625rem; }
+  .page-hero-wave { line-height: 0; }
+  .page-hero-wave svg { width: 100%; height: 50px; display: block; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .info-card {
+    background: #F5F1E8;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(189, 195, 199, 0.4);
+  }
+  .info-icon { font-size: 2.25rem; margin-bottom: 1rem; display: block; }
+  .info-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #1B5E7F;
+    margin-bottom: 0.75rem;
+  }
+  .info-card p { color: #6B7A8D; font-size: 0.9375rem; line-height: 1.7; }
+  .info-card a { color: #1B5E7F; font-weight: 600; }
+  .info-card a:hover { color: #F39C12; }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

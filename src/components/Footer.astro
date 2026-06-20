@@ -1,0 +1,257 @@
+---
+const quickLinks = [
+  { href: '/',         label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about',    label: 'About' },
+  { href: '/blog',     label: 'Blog' },
+  { href: '/contact',  label: 'Contact' },
+];
+
+const services = [
+  'Pulse Reading',
+  'Kanye Oil Therapy',
+  'Cupping',
+  'Acupuncture',
+  'Moxibustion',
+  'Shirodhara',
+];
+---
+
+<footer class="site-footer">
+
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <span class="footer-logo-icon">☸</span>
+            <span>TibetanSorig</span>
+          </a>
+          <p class="footer-tagline">Ancient Wisdom for Modern Healing</p>
+          <p class="footer-tibetan tibetan-script">སོ་བ་རིགས་པའི་བཀའ་དགེའི་གོལ་ས།</p>
+          <p class="footer-description">
+            Emchi Tsundu Dolma brings the profound healing wisdom of Sowa Rigpa — Tibetan Medicine — to Werribee and Melbourne, Australia.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            {quickLinks.map(link => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Treatments</h3>
+          <ul class="footer-links">
+            {services.map(s => (
+              <li><a href="/services">{s}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Contact & Location</h3>
+          <address class="footer-contact">
+            <p>
+              <span class="contact-icon">📞</span>
+              <a href="tel:+61458494785">0458 494 785</a>
+            </p>
+            <p>
+              <span class="contact-icon">📍</span>
+              Werribee, Victoria, Australia
+            </p>
+            <p>
+              <span class="contact-icon">🗓️</span>
+              Monthly at Tara Institute<br/>
+              <small>(1st Saturday of each month)</small>
+            </p>
+            <p>
+              <span class="contact-icon">⏰</span>
+              By appointment only
+            </p>
+          </address>
+          <a href="/contact" class="footer-cta">Book Now →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>© {new Date().getFullYear()} TibetanSorig · Emchi Tsundu Dolma. All rights reserved.</p>
+        <p class="footer-disclaimer">
+          Tibetan Medicine is a complementary practice. Always consult your healthcare provider.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: linear-gradient(180deg, #0F3D52 0%, #091F2A 100%);
+    color: rgba(255,255,255,0.85);
+  }
+
+
+
+  /* Main footer */
+  .footer-main { padding: 4rem 0; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+  }
+
+  /* Brand */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+  }
+  .footer-logo-icon {
+    font-size: 1.75rem;
+    color: #F39C12;
+    filter: drop-shadow(0 0 8px rgba(243, 156, 18, 0.5));
+  }
+  .footer-logo span:last-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: white;
+  }
+  .footer-tagline {
+    color: #E8B44F;
+    font-style: italic;
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+  }
+  .footer-tibetan {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1rem;
+  }
+  .footer-description {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* Columns */
+  .footer-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #E8B44F;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-links {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .footer-links a {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: color 0.25s, padding-left 0.25s;
+    display: inline-block;
+  }
+  .footer-links a:hover {
+    color: #E8B44F;
+    padding-left: 4px;
+  }
+
+  /* Contact */
+  .footer-contact {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-contact p {
+    display: flex;
+    gap: 0.625rem;
+    align-items: flex-start;
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.75);
+  }
+  .footer-contact a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-contact a:hover { color: #E8B44F; }
+  .footer-contact small { font-size: 0.8125rem; color: rgba(255,255,255,0.55); }
+  .contact-icon { font-size: 1rem; flex-shrink: 0; line-height: 1.5; }
+
+  .footer-cta {
+    display: inline-block;
+    padding: 0.625rem 1.5rem;
+    background: linear-gradient(135deg, #F39C12, #E8B44F);
+    color: #0F3D52;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+  }
+  .footer-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.45);
+    color: #0F3D52;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    background: rgba(0,0,0,0.25);
+    padding: 1.25rem 0;
+  }
+  .footer-bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    text-align: center;
+  }
+  .footer-bottom-inner p {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-disclaimer { font-size: 0.75rem !important; color: rgba(255,255,255,0.35) !important; }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-brand { grid-column: 1; }
+  }
+</style>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "quote": "After years of struggling with chronic back pain, Emchi's Kati Basti treatment changed everything. Within three sessions I felt relief that no other therapy could provide. She truly understands the body at a deep level.",
+    "author": "Sarah M.",
+    "location": "Melbourne, VIC",
+    "condition": "Chronic Back Pain",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "quote": "I came with severe anxiety and sleep issues. Through pulse reading, Emchi identified the imbalance immediately. Her herbal pills and lifestyle guidance gave me my life back. I'm sleeping soundly for the first time in years.",
+    "author": "David T.",
+    "location": "Werribee, VIC",
+    "condition": "Anxiety & Insomnia",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "quote": "The Shirodhara session was unlike anything I've experienced. The calm that descended during treatment stayed with me for days. Emchi's knowledge of Tibetan healing is profound and her care for patients is evident in every moment.",
+    "author": "Priya K.",
+    "location": "Geelong, VIC",
+    "condition": "Stress & Burnout",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "quote": "As someone with eczema for 15 years, I had lost hope. Emchi's internal herbal treatment combined with dietary guidance transformed my skin over 3 months. Her holistic approach treats the root, not just the symptoms.",
+    "author": "Emma L.",
+    "location": "Point Cook, VIC",
+    "condition": "Eczema",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "quote": "Emchi is a rare practitioner who bridges ancient wisdom and compassionate modern care. Her acupuncture sessions for my migraines have reduced their frequency by over 70%. Deeply grateful for her healing gifts.",
+    "author": "James R.",
+    "location": "Hoppers Crossing, VIC",
+    "condition": "Chronic Migraines",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "quote": "During cancer treatment I sought Emchi's guidance for complementary support. Her gentle approach, herbal support and wisdom about nutrition and rest made my recovery journey so much more manageable. A true healer.",
+    "author": "Lhamo D.",
+    "location": "Footscray, VIC",
+    "condition": "Cancer Support",
+    "rating": 5
+  }
+]

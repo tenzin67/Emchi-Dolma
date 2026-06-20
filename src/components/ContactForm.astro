@@ -1,0 +1,308 @@
+---
+// ContactForm component using Formspree (no backend required)
+// Replace FORM_ID with your actual Formspree form ID from formspree.io
+const FORMSPREE_ID = 'xykardkd';
+---
+
+<form 
+  id="contact-form"
+  action={`https://formspree.io/f/${FORMSPREE_ID}`}
+  method="POST"
+  class="contact-form"
+  novalidate
+>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name"
+        class="form-input"
+        placeholder="Your full name"
+        required
+        autocomplete="name"
+      />
+      <span class="form-error" role="alert" id="name-error"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email"
+        class="form-input"
+        placeholder="your@email.com"
+        required
+        autocomplete="email"
+      />
+      <span class="form-error" role="alert" id="email-error"></span>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input 
+        type="tel" 
+        id="phone"
+        name="phone"
+        class="form-input"
+        placeholder="0400 000 000"
+        autocomplete="tel"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="service" class="form-label">Treatment of Interest</label>
+      <select id="service" name="service" class="form-input form-select">
+        <option value="">Select a treatment...</option>
+        <option value="pulse-reading">Pulse Reading & Herbal Pills</option>
+        <option value="kanye">Kanye (Oil Therapy)</option>
+        <option value="cupping">Cupping</option>
+        <option value="acupuncture">Acupuncture</option>
+        <option value="moxibustion">Moxibustion</option>
+        <option value="shirodhara">Shirodhara</option>
+        <option value="kati-basti">Kati Basti</option>
+        <option value="greeva-basti">Greeva Basti</option>
+        <option value="ayurvedic">Ayurvedic Consultation</option>
+        <option value="general">General Consultation</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message" class="form-label">Message <span aria-hidden="true">*</span></label>
+    <textarea 
+      id="message" 
+      name="message"
+      class="form-input form-textarea"
+      placeholder="Please describe your health concerns or questions..."
+      rows="5"
+      required
+    ></textarea>
+    <span class="form-error" role="alert" id="message-error"></span>
+  </div>
+
+  <!-- Hidden honeypot to prevent spam -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+  <input type="hidden" name="_subject" value="New consultation request — TibetanSorig" />
+
+  <div class="form-submit">
+    <button type="submit" class="form-btn" id="submit-btn">
+      <span class="btn-text">Send Message</span>
+      <span class="btn-icon" aria-hidden="true">→</span>
+    </button>
+    <p class="form-note">
+      Or call directly: <a href="tel:+61458494785">0458 494 785</a>
+    </p>
+  </div>
+
+  <!-- Success / Error messages -->
+  <div id="form-success" class="form-feedback form-feedback--success" role="alert" aria-live="polite" hidden>
+    <span aria-hidden="true">✅</span>
+    Your message has been sent! Emchi Tsundu Dolma will be in touch within 24–48 hours.
+  </div>
+  <div id="form-error-global" class="form-feedback form-feedback--error" role="alert" aria-live="polite" hidden>
+    <span aria-hidden="true">⚠️</span>
+    Something went wrong. Please try again or call <a href="tel:+61458494785">0458 494 785</a>.
+  </div>
+</form>
+
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2C3E50;
+  }
+  .form-label span { color: #E74C3C; }
+
+  .form-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid rgba(189, 195, 199, 0.7);
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    font-family: 'Inter', sans-serif;
+    color: #2C3E50;
+    background: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #1B5E7F;
+    box-shadow: 0 0 0 3px rgba(27, 94, 127, 0.12);
+  }
+
+  .form-input::placeholder { color: #BDC3C7; }
+
+  .form-select { cursor: pointer; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e"); background-position: right 0.75rem center; background-repeat: no-repeat; background-size: 1.25em; padding-right: 2.5rem; }
+
+  .form-textarea { resize: vertical; min-height: 130px; }
+
+  .form-error {
+    font-size: 0.8125rem;
+    color: #C0392B;
+    min-height: 1rem;
+  }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .form-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9375rem 2rem;
+    background: linear-gradient(135deg, #1B5E7F, #2E8BA8);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(27, 94, 127, 0.35);
+    transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(27, 94, 127, 0.45);
+  }
+  .form-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .btn-icon { transition: transform 0.25s; }
+  .form-btn:hover .btn-icon { transform: translateX(3px); }
+
+  .form-note {
+    font-size: 0.875rem;
+    color: #6B7A8D;
+  }
+  .form-note a { color: #1B5E7F; font-weight: 600; }
+  .form-note a:hover { color: #F39C12; }
+
+  .form-feedback {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .form-feedback--success { background: rgba(39, 174, 96, 0.1); border: 1px solid rgba(39, 174, 96, 0.3); color: #1E8449; }
+  .form-feedback--error   { background: rgba(192, 57, 43, 0.08); border: 1px solid rgba(192, 57, 43, 0.25); color: #922B21; }
+  .form-feedback[hidden]  { display: none; }
+  .form-feedback a { color: inherit; font-weight: 600; }
+
+  .form-input.error { border-color: #C0392B; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1); animation: shake 0.35s ease; }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-5px); }
+    40%       { transform: translateX(5px); }
+    60%       { transform: translateX(-3px); }
+    80%       { transform: translateX(3px); }
+  }
+
+  @media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+    .form-submit { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error-global');
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Clear previous errors
+    document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.form-input').forEach(el => el.classList.remove('error'));
+    if (successMsg) successMsg.hidden = true;
+    if (errorMsg) errorMsg.hidden = true;
+
+    // Validate
+    let valid = true;
+    const name = (document.getElementById('name') as HTMLInputElement)?.value.trim();
+    const email = (document.getElementById('email') as HTMLInputElement)?.value.trim();
+    const message = (document.getElementById('message') as HTMLTextAreaElement)?.value.trim();
+
+    if (!name) {
+      const el = document.getElementById('name');
+      el?.classList.add('error');
+      document.getElementById('name-error')!.textContent = 'Please enter your name.';
+      valid = false;
+    }
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      const el = document.getElementById('email');
+      el?.classList.add('error');
+      document.getElementById('email-error')!.textContent = 'Please enter a valid email address.';
+      valid = false;
+    }
+    if (!message) {
+      const el = document.getElementById('message');
+      el?.classList.add('error');
+      document.getElementById('message-error')!.textContent = 'Please enter a message.';
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Submit
+    submitBtn.disabled = true;
+    submitBtn.querySelector('.btn-text')!.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        if (successMsg) successMsg.hidden = false;
+        successMsg?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        if (errorMsg) errorMsg.hidden = false;
+      }
+    } catch {
+      if (errorMsg) errorMsg.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.querySelector('.btn-text')!.textContent = 'Send Message';
+    }
+  });
+</script>

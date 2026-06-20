@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "condition": "Stress, Anxiety & Emotional Imbalance",
+    "icon": "🧘",
+    "description": "Tibetan medicine views emotional disturbances as rlung (wind) imbalances and addresses them at their root."
+  },
+  {
+    "id": 2,
+    "condition": "Digestive Issues",
+    "icon": "🌀",
+    "description": "Bloating, indigestion, IBS, and poor appetite treated through digestive fire (mé) restoration."
+  },
+  {
+    "id": 3,
+    "condition": "Sleep Problems & Fatigue",
+    "icon": "🌙",
+    "description": "Chronic fatigue and insomnia addressed through constitutional balancing and calming herbal formulas."
+  },
+  {
+    "id": 4,
+    "condition": "Chronic Pain",
+    "icon": "🦴",
+    "description": "Joint pain, back pain, and muscular issues treated with combination therapies targeting root causes."
+  },
+  {
+    "id": 5,
+    "condition": "Women's Health & Hormonal Balance",
+    "icon": "🌸",
+    "description": "Menstrual irregularities, menopause, and hormonal disruptions supported through holistic balancing."
+  },
+  {
+    "id": 6,
+    "condition": "Skin Conditions",
+    "icon": "✨",
+    "description": "Eczema, acne, psoriasis, and skin inflammation treated through internal cleansing and herbal medicine."
+  },
+  {
+    "id": 7,
+    "condition": "Respiratory Issues & Low Immunity",
+    "icon": "🫁",
+    "description": "Chronic respiratory conditions and weakened immunity strengthened through lung tonification."
+  },
+  {
+    "id": 8,
+    "condition": "Tumors & Cancer Support",
+    "icon": "💚",
+    "description": "Complementary support for cancer patients focusing on quality of life and immune system strengthening."
+  }
+]

@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout 
+  title="Book a Consultation"
+  description="Contact Emchi Tsundu Dolma to book a Tibetan Medicine consultation in Werribee, VIC or at Tara Institute, Melbourne. Call 0458 494 785."
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero-tibetan tibetan-script">འབྲེལ་བ་གཉེར་མཁན།</p>
+      <h1 class="page-hero-title">Book a Consultation</h1>
+      <p class="page-hero-subtitle">Take the first step on your healing journey</p>
+    </div>
+    <div class="page-hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#F5F1E8"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section" style="background: #F5F1E8;">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <aside class="contact-info reveal-left">
+          <h2 class="contact-info-heading">Get in Touch</h2>
+
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">📞</div>
+            <div class="detail-content">
+              <h3>Phone</h3>
+              <p><a href="tel:+61458494785">0458 494 785</a></p>
+              <p class="detail-note">Available for calls or texts</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">📍</div>
+            <div class="detail-content">
+              <h3>Location</h3>
+              <p><strong>Werribee, Victoria</strong></p>
+              <p class="detail-note">Exact address provided upon booking</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">🏛️</div>
+            <div class="detail-content">
+              <h3>Tara Institute</h3>
+              <p>Monthly visit — 1st Saturday</p>
+              <p class="detail-note">
+                <a href="https://tarainstitute.org.au" target="_blank" rel="noopener noreferrer">tarainstitute.org.au</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">⏰</div>
+            <div class="detail-content">
+              <h3>Hours</h3>
+              <p>By appointment only</p>
+              <p class="detail-note">Response within 24–48 hours</p>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <div class="contact-quote">
+            <p class="tibetan-script contact-quote-tibetan">ལུས་ཀྱི་ནད་སེལ།</p>
+            <blockquote>
+              "Every healing journey begins with a single step of reaching out."
+            </blockquote>
+          </div>
+
+          <!-- What to prepare -->
+          <div class="contact-prepare">
+            <h3>What to Prepare</h3>
+            <ul>
+              <li>List of current symptoms and concerns</li>
+              <li>Health history (conditions, medications)</li>
+              <li>Typical daily diet and sleep patterns</li>
+              <li>Any questions you have about Tibetan Medicine</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-card">
+            <h2>Send a Message</h2>
+            <p>Fill in the form below and Emchi will reply within 24–48 hours.</p>
+            <ContactForm />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map / Location visual section -->
+  <section class="section-sm" style="background: white; text-align: center;">
+    <div class="container">
+      <h2 class="reveal" style="font-family: 'Playfair Display', serif; color: #1B5E7F; margin-bottom: 0.5rem;">Finding Us</h2>
+      <p class="reveal delay-1" style="color: #6B7A8D; max-width: 500px; margin: 0 auto 2rem;">
+        Consultations are held in Werribee, VIC and at Tara Institute (1st Saturday of each month). 
+        Address details are confirmed upon booking.
+      </p>
+      <div class="location-cards reveal delay-2">
+        <div class="location-card">
+          <div class="loc-icon" aria-hidden="true">🏠</div>
+          <h3>Werribee Clinic</h3>
+          <p>Werribee, Victoria</p>
+          <p class="loc-note">Address on booking confirmation</p>
+        </div>
+        <div class="location-card">
+          <div class="loc-icon" aria-hidden="true">🏛️</div>
+          <h3>Tara Institute</h3>
+          <p>Melbourne, Victoria</p>
+          <p class="loc-note">1st Saturday of each month</p>
+          <a href="https://tarainstitute.org.au" target="_blank" rel="noopener noreferrer">tarainstitute.org.au</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1B5E7F, #0F3D52);
+    padding: 5rem 0 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .page-hero-tibetan { font-size: 1.25rem; color: rgba(255,255,255,0.55); display: block; margin-bottom: 0.75rem; }
+  .page-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: white; margin-bottom: 0.75rem; }
+  .page-hero-subtitle { color: #E8B44F; font-style: italic; font-size: 1.125rem; }
+  .page-hero-wave { line-height: 0; }
+  .page-hero-wave svg { width: 100%; height: 50px; display: block; }
+
+  /* Contact grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Info sidebar */
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-info-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.625rem;
+    color: #1B5E7F;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid rgba(189, 195, 199, 0.4);
+    box-shadow: 0 2px 8px rgba(15, 61, 82, 0.05);
+  }
+  .detail-icon { font-size: 1.625rem; flex-shrink: 0; }
+  .detail-content h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #1B5E7F; margin-bottom: 0.25rem; }
+  .detail-content p { font-size: 0.9375rem; color: #2C3E50; }
+  .detail-content a { color: #1B5E7F; font-weight: 600; }
+  .detail-content a:hover { color: #F39C12; }
+  .detail-note { font-size: 0.8125rem !important; color: #6B7A8D !important; margin-top: 0.125rem; }
+
+  .contact-quote {
+    background: linear-gradient(135deg, rgba(27, 94, 127, 0.06), rgba(46, 139, 168, 0.06));
+    border-radius: 14px;
+    padding: 1.5rem;
+    border-left: 4px solid #F39C12;
+  }
+  .contact-quote-tibetan { font-size: 0.9375rem; color: #6B7A8D; margin-bottom: 0.625rem; display: block; }
+  .contact-quote blockquote { font-style: italic; color: #2C3E50; font-size: 0.9375rem; line-height: 1.6; }
+
+  .contact-prepare {
+    background: white;
+    border-radius: 14px;
+    padding: 1.25rem;
+    border: 1px solid rgba(189, 195, 199, 0.4);
+  }
+  .contact-prepare h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #1B5E7F; margin-bottom: 0.75rem; }
+  .contact-prepare ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .contact-prepare li {
+    padding-left: 1.375rem;
+    position: relative;
+    font-size: 0.875rem;
+    color: #6B7A8D;
+    line-height: 1.5;
+  }
+  .contact-prepare li::before { content: '✦'; position: absolute; left: 0; color: #F39C12; font-size: 0.625rem; top: 0.3em; }
+
+  /* Form card */
+  .form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(189, 195, 199, 0.4);
+    box-shadow: 0 8px 32px rgba(15, 61, 82, 0.08);
+  }
+  .form-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.625rem;
+    color: #1B5E7F;
+    margin-bottom: 0.5rem;
+  }
+  .form-card > p { color: #6B7A8D; font-size: 0.9375rem; margin-bottom: 1.75rem; }
+
+  /* Location cards */
+  .location-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .location-card {
+    background: #F5F1E8;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(189, 195, 199, 0.4);
+    min-width: 240px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .location-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(27,94,127,0.1); }
+  .loc-icon { font-size: 2.5rem; margin-bottom: 0.875rem; }
+  .location-card h3 { font-family: 'Playfair Display', serif; color: #1B5E7F; margin-bottom: 0.375rem; }
+  .location-card p { color: #6B7A8D; font-size: 0.9375rem; }
+  .loc-note { font-size: 0.8125rem !important; }
+  .location-card a { color: #1B5E7F; font-weight: 600; font-size: 0.875rem; margin-top: 0.375rem; display: block; }
+  .location-card a:hover { color: #F39C12; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+</style>

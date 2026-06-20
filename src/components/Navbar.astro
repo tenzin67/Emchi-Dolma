@@ -1,0 +1,288 @@
+---
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: '/',         label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about',    label: 'About' },
+  { href: '/blog',     label: 'Blog' },
+  { href: '/contact',  label: 'Contact' },
+];
+---
+
+<header class="navbar" role="banner">
+  <div class="nav-inner container">
+    <!-- Logo -->
+    <a href="/" class="nav-logo" aria-label="TibetanSorig — Home">
+      <span class="logo-icon">☸</span>
+      <span class="logo-text">TibetanSorig</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <ul role="list">
+        {navLinks.map(link => (
+          <li>
+            <a 
+              href={link.href} 
+              class={`nav-link ${currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'active' : ''}`}
+              aria-current={currentPath === link.href ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- CTA button -->
+    <a href="/contact" class="nav-cta" id="nav-book-btn">Book Consultation</a>
+
+    <!-- Mobile hamburger -->
+    <button 
+      id="hamburger" 
+      class="hamburger" 
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <nav aria-label="Mobile navigation">
+      <ul role="list">
+        {navLinks.map(link => (
+          <li>
+            <a 
+              href={link.href} 
+              class={`mobile-link ${currentPath === link.href ? 'active' : ''}`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="/contact" class="mobile-cta">Book Consultation</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(189, 195, 199, 0.4);
+    box-shadow: 0 2px 20px rgba(15, 61, 82, 0.08);
+    animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 72px;
+  }
+
+  /* Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .logo-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 6px rgba(243, 156, 18, 0.5));
+    animation: breathe 4s ease-in-out infinite;
+    color: #F39C12;
+  }
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #1B5E7F;
+    letter-spacing: -0.02em;
+  }
+
+  /* Desktop nav */
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+  }
+  .nav-desktop ul {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #2C3E50;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.25s, background 0.25s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #F39C12, #1B5E7F);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: #1B5E7F;
+    background: rgba(27, 94, 127, 0.07);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: calc(100% - 1.75rem);
+  }
+
+  /* CTA */
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    background: linear-gradient(135deg, #1B5E7F, #2E8BA8);
+    color: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(27, 94, 127, 0.3);
+    transition: transform 0.25s, box-shadow 0.25s;
+    flex-shrink: 0;
+  }
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(27, 94, 127, 0.4);
+    color: white;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .hamburger:hover { background: rgba(27, 94, 127, 0.08); }
+  .bar {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: #2C3E50;
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+    transform-origin: center;
+  }
+  .hamburger.open .bar:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .hamburger.open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open .bar:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    background: white;
+    border-top: 1px solid rgba(189, 195, 199, 0.4);
+    padding: 1rem 1.5rem 1.5rem;
+    animation: mobileMenuIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes mobileMenuIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; }
+  .mobile-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #2C3E50;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mobile-link:hover, .mobile-link.active {
+    background: rgba(27, 94, 127, 0.08);
+    color: #1B5E7F;
+  }
+  .mobile-cta {
+    display: block;
+    margin-top: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: linear-gradient(135deg, #1B5E7F, #2E8BA8);
+    color: white;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .mobile-cta:hover { opacity: 0.9; color: white; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .nav-desktop, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+  @media (max-width: 900px) {
+    .mobile-menu.open { display: block; }
+  }
+</style>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    mobileMenu?.classList.toggle('open', isOpen);
+    mobileMenu?.setAttribute('aria-hidden', String(!isOpen));
+  });
+
+  // Close mobile menu on link click
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+</script>

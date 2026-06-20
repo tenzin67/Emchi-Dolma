@@ -1,0 +1,146 @@
+[
+  {
+    "id": "pulse-reading",
+    "tibetanName": "རྩ་བརྟགས།",
+    "englishName": "Pulse Reading & Herbal Pills",
+    "subtitle": "Tibetan Diagnosis",
+    "description": "Traditional Tibetan pulse diagnosis assesses your constitution and identifies imbalances. Combined with precision-formulated herbal remedies prepared according to ancient texts.",
+    "icon": "🫀",
+    "benefits": [
+      "Identifies root cause of imbalances",
+      "Personalized herbal prescription",
+      "Preventive health insights",
+      "Holistic constitutional assessment"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "kanye",
+    "tibetanName": "སྐྱེ་དགུ་མར།",
+    "englishName": "Kanye (Tibetan Oil Therapy)",
+    "subtitle": "Warm Herbal Oil Massage",
+    "description": "Warm medicated herbal oil massage that balances your body constitution, improves circulation, deeply nourishes tissues, and calms the nervous system.",
+    "icon": "💆",
+    "benefits": [
+      "Improves blood circulation",
+      "Reduces pain & stiffness",
+      "Nourishes skin & deep tissues",
+      "Calms the nervous system"
+    ],
+    "duration": "60–90 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "cupping",
+    "tibetanName": "མེ་བཙའ།",
+    "englishName": "Cupping",
+    "subtitle": "Traditional Suction Therapy",
+    "description": "Ancient suction cup therapy that draws out toxins, improves energy flow, and relieves musculoskeletal pain. Combines Tibetan and traditional techniques.",
+    "icon": "⭕",
+    "benefits": [
+      "Removes stagnant energy & toxins",
+      "Relieves muscle tension",
+      "Improves lymphatic drainage",
+      "Boosts local circulation"
+    ],
+    "duration": "30–45 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "acupuncture",
+    "tibetanName": "གསར་བཀག",
+    "englishName": "Acupuncture",
+    "subtitle": "Tibetan Needle Therapy",
+    "description": "Precision needle placement at vital energy points to restore balance, relieve pain, and stimulate the body's innate healing capacity.",
+    "icon": "🪡",
+    "benefits": [
+      "Restores energy flow (rlung)",
+      "Effective pain management",
+      "Reduces anxiety & stress",
+      "Supports organ function"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "moxibustion",
+    "tibetanName": "མེ་བཙར།",
+    "englishName": "Moxibustion",
+    "subtitle": "Healing Heat Therapy",
+    "description": "Therapeutic burning of dried artemisia herb near specific points to warm meridians, expel cold, and invigorate the flow of vital energy through the body.",
+    "icon": "🌿",
+    "benefits": [
+      "Warms and tonifies the body",
+      "Relieves cold-type conditions",
+      "Stimulates energy & vitality",
+      "Strengthens immune function"
+    ],
+    "duration": "30–45 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "shirodhara",
+    "tibetanName": "དབུར་མར་བབས།",
+    "englishName": "Shirodhara",
+    "subtitle": "Oil Flow Therapy",
+    "description": "A continuous warm stream of medicated oil poured gently over the forehead (third eye), inducing deep relaxation, calming the mind, and balancing the nervous system.",
+    "icon": "🕯️",
+    "benefits": [
+      "Profound mental relaxation",
+      "Relieves insomnia & headaches",
+      "Balances the nervous system",
+      "Enhances mental clarity"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "kati-basti",
+    "tibetanName": "རྒྱབ་མར་གཞོང།",
+    "englishName": "Kati Basti",
+    "subtitle": "Lower Back Oil Treatment",
+    "description": "Warm medicated oil retained in a dough well placed over the lower back to deeply penetrate and nourish the lumbar spine, relieving chronic back pain and stiffness.",
+    "icon": "🦴",
+    "benefits": [
+      "Relieves chronic low back pain",
+      "Nourishes lumbar vertebrae",
+      "Reduces disc-related issues",
+      "Improves spinal flexibility"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "greeva-basti",
+    "tibetanName": "མགྲིན་མར་གཞོང།",
+    "englishName": "Greeva Basti",
+    "subtitle": "Neck Oil Treatment",
+    "description": "Targeted warm oil pool therapy on the neck and cervical spine to relieve stiffness, tension headaches, and cervical spondylosis.",
+    "icon": "🧠",
+    "benefits": [
+      "Relieves neck & shoulder pain",
+      "Reduces cervical spondylosis",
+      "Eases tension headaches",
+      "Restores neck mobility"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "ayurvedic-consultation",
+    "tibetanName": "གསོ་རིག་གཞུང་འཇལ།",
+    "englishName": "Ayurvedic Consultation",
+    "subtitle": "Holistic Wellness Assessment",
+    "description": "Comprehensive Ayurvedic assessment of your dosha constitution (Vata, Pitta, Kapha) combined with Tibetan Medicine principles for a unified treatment plan.",
+    "icon": "🌸",
+    "benefits": [
+      "Full dosha assessment",
+      "Personalized diet & lifestyle plan",
+      "Integrated healing approach",
+      "Long-term wellness roadmap"
+    ],
+    "duration": "60–90 minutes",
+    "price": "Available on consultation"
+  }
+]

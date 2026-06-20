@@ -1,0 +1,53 @@
+---
+interface Props {
+  condition: string;
+  icon: string;
+  description?: string;
+  delay?: number;
+}
+const { condition, icon, description, delay = 0 } = Astro.props;
+---
+
+<div class="condition-card reveal" style={`transition-delay: ${delay}ms`}>
+  <span class="condition-icon" aria-hidden="true">{icon}</span>
+  <div class="condition-content">
+    <p class="condition-name">{condition}</p>
+    {description && <p class="condition-desc">{description}</p>}
+  </div>
+</div>
+
+<style>
+  .condition-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 1rem 1.25rem;
+    background: rgba(27, 94, 127, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(27, 94, 127, 0.1);
+    transition: background 0.25s, transform 0.25s, border-color 0.25s;
+  }
+  .condition-card:hover {
+    background: rgba(27, 94, 127, 0.08);
+    border-color: rgba(27, 94, 127, 0.25);
+    transform: translateX(4px);
+  }
+  .condition-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+  .condition-name {
+    font-weight: 600;
+    color: #1B5E7F;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+  }
+  .condition-desc {
+    font-size: 0.8125rem;
+    color: #6B7A8D;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+  }
+</style>

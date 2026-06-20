@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import '../styles/animations.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description = 'Emchi Tsundu Dolma — Tibetan Medicine & Ayurveda Consultant in Werribee, VIC. Ancient Sowa Rigpa healing for body, mind & spirit.',
+  image = '/images/medicine-buddha.png'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- Primary Meta -->
+  <title>{title} | TibetanSorig</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="Emchi Tsundu Dolma" />
+  <meta name="keywords" content="Tibetan Medicine, Sowa Rigpa, Ayurveda, Emchi Tsundu Dolma, Werribee, Melbourne, holistic healing, pulse reading, acupuncture, moxibustion" />
+  <link rel="canonical" href={canonicalURL} />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={`${title} | TibetanSorig`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.site)} />
+  <meta property="og:locale" content="en_AU" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${title} | TibetanSorig`} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Skip navigation for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <Navbar />
+  
+  <main id="main-content">
+    <slot />
+  </main>
+  
+  <Footer />
+
+  <!-- Intersection Observer for scroll animations -->
+  <script>
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    
+    revealElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

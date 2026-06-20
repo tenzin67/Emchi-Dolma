@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet">
+  <!-- String line -->
+  <path d="M0,20 Q100,10 200,20 Q300,30 400,20 Q500,10 600,20 Q700,30 800,20" 
+        stroke="#8B7355" stroke-width="2" fill="none" opacity="0.7"/>
+  
+  <!-- Flag 1: Blue (Wind/Sky) -->
+  <g transform="translate(20, 20)">
+    <rect width="80" height="60" fill="#4A90D9" rx="2"/>
+    <text x="40" y="22" text-anchor="middle" font-size="9" fill="white" opacity="0.9" font-family="serif">ལྷ་</text>
+    <text x="40" y="36" text-anchor="middle" font-size="7" fill="white" opacity="0.7">རླུང་རྟ།</text>
+    <text x="40" y="50" text-anchor="middle" font-size="8" fill="white" opacity="0.8">☸</text>
+  </g>
+  
+  <!-- Flag 2: White (Water/Clouds) -->
+  <g transform="translate(120, 20)">
+    <rect width="80" height="60" fill="#F0F0F0" rx="2" stroke="#D0D0D0" stroke-width="1"/>
+    <text x="40" y="22" text-anchor="middle" font-size="9" fill="#555" opacity="0.9" font-family="serif">སེར།</text>
+    <text x="40" y="36" text-anchor="middle" font-size="7" fill="#555" opacity="0.7">རྟ་མཆོག</text>
+    <text x="40" y="50" text-anchor="middle" font-size="8" fill="#555" opacity="0.8">☸</text>
+  </g>
+  
+  <!-- Flag 3: Red (Fire) -->
+  <g transform="translate(220, 20)">
+    <rect width="80" height="60" fill="#E74C3C" rx="2"/>
+    <text x="40" y="22" text-anchor="middle" font-size="9" fill="white" opacity="0.9" font-family="serif">དམར།</text>
+    <text x="40" y="36" text-anchor="middle" font-size="7" fill="white" opacity="0.7">མེ་ལྷ།</text>
+    <text x="40" y="50" text-anchor="middle" font-size="8" fill="white" opacity="0.8">☸</text>
+  </g>
+  
+  <!-- Flag 4: Green (Earth) -->
+  <g transform="translate(320, 20)">
+    <rect width="80" height="60" fill="#27AE60" rx="2"/>
+    <text x="40" y="22" text-anchor="middle" font-size="9" fill="white" opacity="0.9" font-family="serif">ལྗང།</text>
+    <text x="40" y="36" text-anchor="middle" font-size="7" fill="white" opacity="0.7">ས་བདག</text>
+    <text x="40" y="50" text-anchor="middle" font-size="8" fill="white" opacity="0.8">☸</text>
+  </g>
+  
+  <!-- Flag 5: Yellow (Earth/Center) -->
+  <g transform="translate(420, 20)">
+    <rect width="80" height="60" fill="#F39C12" rx="2"/>
+    <text x="40" y="22" text-anchor="middle" font-size="9" fill="white" opacity="0.9" font-family="serif">སེར།</text>
+    <text x="40" y="36" text-anchor="middle" font-size="7" fill="white" opacity="0.7">གནམ་ལྷ།</text>
+    <text x="40" y="50" text-anchor="middle" font-size="8" fill="white" opacity="0.8">☸</text>
+  </g>
+  
+  <!-- Repeat the pattern -->
+  <g transform="translate(520, 20)">
+    <rect width="80" height="60" fill="#4A90D9" rx="2"/>
+    <text x="40" y="35" text-anchor="middle" font-size="16" fill="white" opacity="0.6">☸</text>
+  </g>
+  <g transform="translate(620, 20)">
+    <rect width="80" height="60" fill="#F0F0F0" rx="2" stroke="#D0D0D0" stroke-width="1"/>
+    <text x="40" y="35" text-anchor="middle" font-size="16" fill="#555" opacity="0.6">☸</text>
+  </g>
+  <g transform="translate(720, 20)">
+    <rect width="80" height="60" fill="#E74C3C" rx="2"/>
+    <text x="40" y="35" text-anchor="middle" font-size="16" fill="white" opacity="0.6">☸</text>
+  </g>
+</svg>

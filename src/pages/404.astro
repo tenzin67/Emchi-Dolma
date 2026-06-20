@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" description="The page you're looking for could not be found.">
+  <section class="not-found-section">
+    <div class="container not-found-inner">
+      <div class="not-found-icon" aria-hidden="true">☸</div>
+      <p class="not-found-tibetan tibetan-script">འཚོལ་མ་རྙེད།</p>
+      <h1 class="not-found-title">404 — Page Not Found</h1>
+      <p class="not-found-desc">
+        The page you're looking for seems to have wandered off the healing path. 
+        Let us guide you back.
+      </p>
+      <div class="not-found-actions">
+        <a href="/" class="btn btn-primary" id="not-found-home-btn">Return Home</a>
+        <a href="/contact" class="btn btn-secondary" id="not-found-contact-btn">Contact Emchi</a>
+      </div>
+      <p class="not-found-mantra tibetan-script" aria-hidden="true">
+        ཏདྱ་ཐཱ། ཨོཾ་བྷཻ་ཥ་ཛྱེ་བྷཻ་ཥ་ཛྱེ་མ་ཧཱ་བྷཻ་ཥ་ཛྱེ་རཱ་ཛ་ས་མུདྒ་ཏེ་སྭཱ་ཧཱ།
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found-section {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #0F3D52, #1B5E7F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .not-found-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 4rem 0;
+  }
+  .not-found-icon {
+    font-size: 5rem;
+    color: #E8B44F;
+    filter: drop-shadow(0 0 20px rgba(243, 156, 18, 0.5));
+    animation: breathe 3s ease-in-out infinite, mandalaRotate 20s linear infinite;
+  }
+  @keyframes mandalaRotate { to { transform: rotate(360deg); } }
+  .not-found-tibetan { color: rgba(255,255,255,0.45); font-size: 1.125rem; }
+  .not-found-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+  }
+  .not-found-desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.0625rem;
+    max-width: 480px;
+    line-height: 1.65;
+  }
+  .not-found-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .not-found-mantra {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.25);
+    max-width: 480px;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+</style>
