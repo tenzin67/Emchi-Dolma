@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound() { return <section className="not-found-section"><div className="container not-found-inner"><span>☸</span><p className="tibetan-script">འཚོལ་མ་རྙེད།</p><h1>404 — Page Not Found</h1><p>The page you&apos;re looking for seems to have wandered off the healing path. Let us guide you back.</p><div><Link href="/" className="btn btn-primary">Return Home</Link> <Link href="/contact" className="btn btn-secondary">Contact Emchi</Link></div></div></section>; }

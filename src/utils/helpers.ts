@@ -1,4 +1,4 @@
-`/**
+/**
  * Format a date to a human-readable string
  */
 export function formatDate(date: Date | string, locale = 'en-AU'): string {
