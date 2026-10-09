@@ -15,12 +15,16 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="footer-logo" aria-label="Emchi Dolma — Tibetan Sorig">
               <img
-                src="/images/logo-horizontal-white.png"
-                alt="Emchi Dolma — Tibetan Sorig, Ayurveda & Wellness"
-                className="footer-logo-image"
-                width={200}
-                height={66}
+                src="/images/logo.png"
+                alt="Emchi Dolma Emblem"
+                className="footer-logo-circle"
+                width={56}
+                height={56}
               />
+              <div className="footer-brand-text">
+                <span className="footer-logo-title">Emchi Dolma</span>
+                <span className="footer-logo-sub">Tibetan Sorig & Wellness</span>
+              </div>
             </Link>
             <p className="footer-tagline">Ancient Wisdom for Modern Healing</p>
             <p className="footer-description">

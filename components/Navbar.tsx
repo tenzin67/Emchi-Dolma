@@ -30,12 +30,16 @@ export default function Navbar() {
         <div className="nav-inner container">
           <Link href="/" className="nav-logo" aria-label="Emchi Dolma — Tibetan Sorig">
             <img
-              src="/images/logo-horizontal.png"
-              alt="Emchi Dolma — Tibetan Sorig, Ayurveda & Wellness"
-              className="nav-logo-image"
-              width={180}
-              height={60}
+              src="/images/logo.png"
+              alt="Emchi Dolma Emblem"
+              className="nav-logo-circle"
+              width={46}
+              height={46}
             />
+            <div className="nav-brand-text">
+              <span className="logo-title">Emchi Dolma</span>
+              <span className="logo-sub">Tibetan Sorig & Wellness</span>
+            </div>
           </Link>
           <nav className="nav-desktop" aria-label="Main navigation">
             <ul>
