@@ -7,8 +7,15 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://emchidolma.com'),
-  title: { default: 'Emchi Dolma — Tibetan Sorig & Wellness', template: '%s | Emchi Dolma' },
+  title: { default: 'EmchiD — Tibetan Sorig & Wellness', template: '%s | EmchiD' },
   description: 'Emchi Tsundu Dolma — Tibetan Medicine (Sowa Rigpa) & Ayurveda Consultant in Werribee, VIC. Tibetan Sorig, Ayurveda & Wellness.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/logo.png', sizes: '1024x1024', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: { type: 'website', locale: 'en_AU', images: ['/images/medicine-buddha.png'] },
 };
 
