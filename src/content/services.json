@@ -19,7 +19,7 @@
   {
     "id": "kanye",
     "image": "/images/tibetan oild therapy .webp",
-    "tibetanName": "སྐྱེ་དགུ་མར།",
+    "tibetanName": "བསྐུ་མཉེས་",
     "englishName": "Kanye",
     "subtitle": "Warm Herbal Oil Massage",
     "description": "Warm medicated herbal oil massage that balances your body constitution, improves circulation, deeply nourishes tissues, and calms the nervous system.",
@@ -131,6 +131,40 @@
       "Reduces cervical spondylosis",
       "Eases tension headaches",
       "Restores neck mobility"
+    ],
+    "duration": "45–60 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "nasya",
+    "image": "/images/nasya.jpg",
+    "tibetanName": "སྣ་སྨན་",
+    "englishName": "Nasya (nasal oil therapy)",
+    "subtitle": "Nasal Herbal Therapy",
+    "description": "Gentle administration of warm medicated herbal oil drops through the nasal passages to clear sinus congestion, alleviate headaches, improve breathing, and nourish the sensory organs.",
+    "icon": "👃",
+    "benefits": [
+      "Clears sinus congestion & allergies",
+      "Relieves headaches & migraines",
+      "Soothes tension in head, neck & shoulders",
+      "Enhances sensory sharpness & mental clarity"
+    ],
+    "duration": "30–45 minutes",
+    "price": "Available on consultation"
+  },
+  {
+    "id": "skin-detoxification",
+    "image": "/images/skin-detox.jpg",
+    "tibetanName": "སྲོལ་རྒྱུན་པགས་པའི་དུག་སེལ།",
+    "englishName": "Traditional Skin Detoxification",
+    "subtitle": "Tibetan & Ayurvedic Herbal Purification",
+    "description": "A revitalising herbal purification therapy combining Tibetan Sowa Rigpa and Ayurvedic principles. Medicated herbal pastes and botanical packs are applied to draw out deep-seated impurities, pacify excess heat and inflammation (mKhris-pa / Pitta), nourish skin channels, and restore a radiant complexion.",
+    "icon": "✨",
+    "benefits": [
+      "Purges deep impurities & environmental toxins",
+      "Pacifies skin heat, redness & inflammation",
+      "Balances bodily humors (mKhris-pa & Pitta)",
+      "Restores natural skin glow & vitality (mDangs)"
     ],
     "duration": "45–60 minutes",
     "price": "Available on consultation"

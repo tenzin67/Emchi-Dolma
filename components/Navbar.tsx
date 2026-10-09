@@ -29,7 +29,13 @@ export default function Navbar() {
       <header className="navbar">
         <div className="nav-inner container">
           <Link href="/" className="nav-logo" aria-label="TibetanSorig — Home">
-            <span className="logo-icon">☸</span>
+            <img
+              src="/images/logo.png"
+              alt="Emchi Dolma — TibetanSorig Logo"
+              className="logo-img"
+              width={46}
+              height={46}
+            />
             <span className="logo-text">TibetanSorig</span>
           </Link>
           <nav className="nav-desktop" aria-label="Main navigation">

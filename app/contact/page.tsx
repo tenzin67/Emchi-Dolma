@@ -101,7 +101,13 @@ export default function ContactPage() {
               </p>
 
               <div className="practitioner-strip">
-                <span className="practitioner-avatar" aria-hidden="true">☸</span>
+                <img
+                  src="/images/logo.png"
+                  alt="Emchi Tsundu Dolma"
+                  className="practitioner-logo-thumb"
+                  width={46}
+                  height={46}
+                />
                 <div>
                   <strong>Emchi Tsundu Dolma</strong>
                   <small>Tibetan Medicine & Ayurveda Consultant · Men-Tsee-Khang Graduate</small>

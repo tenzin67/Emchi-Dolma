@@ -14,7 +14,13 @@ export default function Footer() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
-              <span>☸</span>
+              <img
+                src="/images/logo.png"
+                alt="Emchi Dolma — TibetanSorig Logo"
+                className="footer-logo-img"
+                width={56}
+                height={56}
+              />
               <span>TibetanSorig</span>
             </Link>
             <p className="footer-tagline">Ancient Wisdom for Modern Healing</p>
@@ -35,7 +41,7 @@ export default function Footer() {
           <div className="footer-col">
             <h2>Treatments</h2>
             <ul>
-              {['Pulse Reading', 'Kanye', 'Cupping', 'Acupuncture', 'Moxibustion', 'Shirodhara'].map((service) => (
+              {['Pulse Reading', 'Kanye', 'Cupping', 'Acupuncture', 'Moxibustion', 'Shirodhara', 'Nasya', 'Skin Detox'].map((service) => (
                 <li key={service}>
                   <Link href="/services">{service}</Link>
                 </li>
