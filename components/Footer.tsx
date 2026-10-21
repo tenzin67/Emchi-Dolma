@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="footer-col">
             <h2>Treatments</h2>
             <ul>
-              {['Pulse Reading', 'Kanye', 'Cupping', 'Acupuncture', 'Moxibustion', 'Shirodhara', 'Nasya', 'Skin Detox'].map((service) => (
+              {['Pulse Reading', 'Kanye', 'Cupping', 'Acupuncture', 'Moxibustion', 'Shirodhara', 'Nasya', 'Skin Detox', 'Herbal Steaming'].map((service) => (
                 <li key={service}>
                   <Link href="/services">{service}</Link>
                 </li>

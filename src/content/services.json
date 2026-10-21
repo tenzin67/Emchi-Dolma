@@ -168,5 +168,22 @@
     ],
     "duration": "45–60 minutes",
     "price": "Available on consultation"
+  },
+  {
+    "id": "herbal-steaming",
+    "image": "/images/herbal-steaming.jpg",
+    "tibetanName": "རླང་ལུམས་",
+    "englishName": "Herbal Steaming",
+    "subtitle": "Traditional Tibetan Steam Therapy (Lang-Lum)",
+    "description": "An authentic Tibetan medicated steam therapy (Lang-Lum) using aromatic healing herbs inside a traditional wooden chamber. Deeply opens energy channels, dispels cold and rLung (wind) imbalances, relieves joint and muscle stiffness, and purges toxins through purifying sweat while keeping the head rested and cool.",
+    "icon": "♨️",
+    "benefits": [
+      "Relieves joint stiffness, arthritis & muscular tension",
+      "Dispels cold imbalances & pacifies rLung (wind)",
+      "Deep cellular detoxification through purifying sweat",
+      "Improves blood circulation & revitalises skin radiance"
+    ],
+    "duration": "30–45 minutes",
+    "price": "Available on consultation"
   }
 ]
