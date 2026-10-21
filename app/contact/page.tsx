@@ -102,7 +102,7 @@ export default function ContactPage() {
 
               <div className="practitioner-strip">
                 <img
-                  src="/images/logo.png"
+                  src="/images/emchi-dolma.jpg"
                   alt="Emchi Tsundu Dolma"
                   className="practitioner-logo-thumb"
                   width={46}
