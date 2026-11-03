@@ -28,18 +28,14 @@ export default function Navbar() {
     <>
       <header className="navbar">
         <div className="nav-inner container">
-          <Link href="/" className="nav-logo" aria-label="EmchiD — Tibetan Sorig">
+          <Link href="/" className="nav-logo" aria-label="EmchiDolma — Tibetan Sorig">
             <img
-              src="/images/logo.png"
-              alt="EmchiD Emblem"
-              className="nav-logo-circle"
-              width={46}
-              height={46}
+              src="/images/logo-horizontal.png"
+              alt="EmchiDolma — Tibetan Sorig, Ayurveda & Wellness"
+              className="nav-logo-image"
+              width={180}
+              height={60}
             />
-            <div className="nav-brand-text">
-              <span className="logo-title">EmchiD</span>
-              <span className="logo-sub">Tibetan Sorig & Wellness</span>
-            </div>
           </Link>
           <nav className="nav-desktop" aria-label="Main navigation">
             <ul>

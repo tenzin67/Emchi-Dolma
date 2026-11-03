@@ -13,18 +13,14 @@ export default function Footer() {
       <div className="footer-main">
         <div className="container footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="footer-logo" aria-label="EmchiD — Tibetan Sorig">
+            <Link href="/" className="footer-logo" aria-label="EmchiDolma — Tibetan Sorig">
               <img
-                src="/images/logo.png"
-                alt="EmchiD Emblem"
-                className="footer-logo-circle"
-                width={56}
-                height={56}
+                src="/images/logo-horizontal-white.png"
+                alt="EmchiDolma — Tibetan Sorig, Ayurveda & Wellness"
+                className="footer-logo-image"
+                width={200}
+                height={66}
               />
-              <div className="footer-brand-text">
-                <span className="footer-logo-title">EmchiD</span>
-                <span className="footer-logo-sub">Tibetan Sorig & Wellness</span>
-              </div>
             </Link>
             <p className="footer-tagline">Ancient Wisdom for Modern Healing</p>
             <p className="footer-description">
@@ -65,7 +61,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container">
-          <p>© {new Date().getFullYear()} EmchiD · Tibetan Sorig. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} EmchiDolma · Tibetan Sorig. All rights reserved.</p>
           <p>Tibetan Medicine is a complementary practice. Always consult your healthcare provider.</p>
         </div>
       </div>

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://emchidolma.com'),
-  title: { default: 'EmchiD — Tibetan Sorig & Wellness', template: '%s | EmchiD' },
+  title: { default: 'EmchiDolma — Tibetan Sorig & Wellness', template: '%s | EmchiDolma' },
   description: 'Emchi Tsundu Dolma — Tibetan Medicine (Sowa Rigpa) & Ayurveda Consultant in Werribee, VIC. Tibetan Sorig, Ayurveda & Wellness.',
   icons: {
     icon: [
