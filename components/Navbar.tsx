@@ -33,8 +33,8 @@ export default function Navbar() {
               src="/images/logo-horizontal.png"
               alt="EmchiDolma — Tibetan Sorig, Ayurveda & Wellness"
               className="nav-logo-image"
-              width={180}
-              height={60}
+              width={220}
+              height={73}
             />
           </Link>
           <nav className="nav-desktop" aria-label="Main navigation">

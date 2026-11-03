@@ -18,8 +18,8 @@ export default function Footer() {
                 src="/images/logo-horizontal-white.png"
                 alt="EmchiDolma — Tibetan Sorig, Ayurveda & Wellness"
                 className="footer-logo-image"
-                width={200}
-                height={66}
+                width={240}
+                height={80}
               />
             </Link>
             <p className="footer-tagline">Ancient Wisdom for Modern Healing</p>
